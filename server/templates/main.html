@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        draw star by number
+    </title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1> 인사말, 맺음말 </h1><br>
+    <form method="POST" action="/main">
+        <div>
+            <label for="sent"> 검사할 문장 </label>
+            <input type="text" name="sent">
+        </div>
+        
+        <div class='button'>
+            <button type="submit">추천받기</button>
+        </div>
+    </form>
+    <div>
+        <p>
+            {% if sent == None %}
+                <h5> 아직 아무 값도 입력이 안되었습니다. </h5>
+            {% else %}
+                <h5>추천할 문장</h5>
+                {% for re in reco %}
+                <p>
+                    {{re}}
+                </p>
+                {% endfor %}
+            {% endif %}
+        </p>
+    </div>
+</body>
+</html>
