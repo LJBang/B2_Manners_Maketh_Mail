@@ -2,36 +2,70 @@
 <html>
 <head>
     <title>
-        draw star by number
+        Greeting
     </title>
     <style>
     </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-    <h1> 인사말, 맺음말 </h1><br>
-    <form method="POST" action="/main">
-        <div>
-            <label for="sent"> 검사할 문장 </label>
-            <input type="text" name="sent">
+    <h1 id="my_header"> 인사말, 맺음말 </h1><br>
+    <div class="container">
+        <div class="box" id="input_box">
+            <form method="POST" action="/main">
+                <span class="input-group-text" style="display:block;">검사할 문장</span>
+                <textarea  name="sent" class="form-control" style="resize:none;"></textarea>
+                <span class="input-group-text">
+                    <div class="button" style="position:relative; right:0;">
+                        <button type="submit" class="btn btn-outline-secondary">추천받기</button>
+                    </div>
+                </span>
+            </form>
         </div>
-        
-        <div class='button'>
-            <button type="submit">추천받기</button>
+        <div class="box" id="arrow_box">
+            <img id="arrow" src = "{{ url_for('static', filename='icon/exchange.png') }}">
         </div>
-    </form>
-    <div>
-        <p>
-            {% if sent == None %}
-                <h5> 아직 아무 값도 입력이 안되었습니다. </h5>
-            {% else %}
-                <h5>추천할 문장</h5>
-                {% for re in reco %}
-                <p>
-                    {{re}}
-                </p>
-                {% endfor %}
-            {% endif %}
-        </p>
+        <div class="box" id="output_box">
+            <p>
+                <span class="input-group-text"style="display:block;">추천 문장</span>
+                {% if sent == None %}
+                    <h5> 문장을 입력해주세요. </h5>
+                {% else %}
+                
+                <table id="ouput_table">
+                    <tr>
+                        <td id="reco1">
+                            {{reco1}}
+                        </td>
+                        <td>
+                        <button class="cp_btn btn btn-outline-secondary" data-clipboard-target="#reco1">Copy</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="reco2">
+                            {{reco2}}
+                        </td>
+                        <td>
+                        <button class="cp_btn btn btn-outline-secondary" data-clipboard-target="#reco2">Copy</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="reco3">
+                            {{reco3}}
+                        </td>
+                        <td>
+                        <button class="cp_btn btn btn-outline-secondary" data-clipboard-target="#reco3">Copy</button>
+                        </td>
+                    </tr>
+                </table>
+                {% endif %}
+            </p>
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+    <script>
+        new ClipboardJS('.cp_btn');
+    </script>
 </body>
 </html>
