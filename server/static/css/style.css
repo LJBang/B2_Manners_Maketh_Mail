@@ -1,0 +1,52 @@
+body{
+    text-align:center;
+}
+#my_header{
+    padding: 10%;
+    padding-bottom: 0;
+    text-align:center;
+}
+.container {
+    margin-top: 0;
+    width: 80%;
+    height: 50%;
+    display: table;
+    border-collapse: collapse;
+    align-items:center;
+    display: flex; 
+    justify-content:center;
+    margin-left: auto; 
+    margin-right: auto;
+    position: relative;
+}
+.box {
+    height: 50%;
+    float: left;
+    display: table-cell;
+}
+#input_box {
+    position: relative;
+    top: 0px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+#output_box {
+    position: relative;
+    top: 0px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+#arrow{
+    width: 30%;
+}
+#arrow_box{
+    width: 10%;
+    align-items:center;
+    display: flex; 
+    justify-content:center;
+}
+#output_table{
+    width:100%;
+}
