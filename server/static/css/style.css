@@ -1,11 +1,19 @@
+@font-face {
+    font-family: 'S-CoreDream-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body{
     text-align:center;
+    font-family:'S-CoreDream-5Medium', serif;
 }
 #my_header{
-    padding: 10%;
+    padding: 5%;
     padding-bottom: 0;
     text-align:center;
 }
+
 .container {
     margin-top: 0;
     width: 80%;

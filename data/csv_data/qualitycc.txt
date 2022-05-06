@@ -1,0 +1,17 @@
+list of csv dataset with NaN 
+/home/ubuntu/B2_Greetings/data/csv_data/opening/월(月)인사.csv
+/home/ubuntu/B2_Greetings/data/csv_data/opening/특정일.csv
+/home/ubuntu/B2_Greetings/data/csv_data/opening/느낌인사.csv
+/home/ubuntu/B2_Greetings/data/csv_data/opening/계절인사.csv
+/home/ubuntu/B2_Greetings/data/csv_data/opening/요일인사.csv
+/home/ubuntu/B2_Greetings/data/csv_data/opening/시간인사.csv
+/home/ubuntu/B2_Greetings/data/csv_data/opening/주제별인사.csv
+/home/ubuntu/B2_Greetings/data/csv_data/opening/날씨인사.csv
+/home/ubuntu/B2_Greetings/data/csv_data/closing/부탁.csv
+/home/ubuntu/B2_Greetings/data/csv_data/closing/날씨.csv
+/home/ubuntu/B2_Greetings/data/csv_data/closing/건강_행복.csv
+/home/ubuntu/B2_Greetings/data/csv_data/closing/만남.csv
+/home/ubuntu/B2_Greetings/data/csv_data/closing/기타.csv
+/home/ubuntu/B2_Greetings/data/csv_data/closing/날씨인사.csv
+/home/ubuntu/B2_Greetings/data/csv_data/closing/성공.csv
+/home/ubuntu/B2_Greetings/data/csv_data/closing/계절.csv
